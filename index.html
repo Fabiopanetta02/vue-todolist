@@ -36,7 +36,7 @@
         </header>
         <main class="w-50 mx-auto">
             <div class="input-group mb-3">
-                <input v-model="newTask" type="text" class="form-control" placeholder="Aggiungi task">
+                <input v-model.trim="newTask" type="text" class="form-control" placeholder="Aggiungi task" @keyup.enter="addTask">
                 <button class="btn btn-success" @click="addTask">Aggiungi</button>
             </div>
             <ul class="list-group my-3">

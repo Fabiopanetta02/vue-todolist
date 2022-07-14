@@ -23,6 +23,7 @@ const root = new Vue({
                 text: this.newTask,
                 done: true,
             });
+            this.newTask='';
         }
     }
 })
