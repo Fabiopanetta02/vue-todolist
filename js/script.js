@@ -21,7 +21,7 @@ const root = new Vue({
         addTask() {
             this.tasks.push({
                 text: this.newTask,
-                done: true,
+                done: false,
             });
             this.newTask='';
         }

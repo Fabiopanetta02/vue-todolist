@@ -40,7 +40,9 @@
                 <button class="btn btn-success" @click="addTask">Aggiungi</button>
             </div>
             <ul class="list-group my-3">
-                <li v-for="(task, i) in tasks" class="list-group-item d-flex justify-content-between">{{ task.text }}
+                <li v-for="(task, i) in tasks" class="list-group-item d-flex justify-content-between">
+                    <del v-if="task.done">{{ task.text }}</del>
+                    <div v-else>{{ task.text }}</div>
                     <button class="btn-close" @click="removeTask(i)"></button>
                 </li>
             </ul>
